@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #f0f0f0; /* Cor de fundo geral */
+    background-color: #f0f0f0;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ body:not(:has(:target)) #cadastro,
     align-items: center;
     flex-direction: column;
 
-    background-color: #ffffff; /* Fundo branco para destacar */
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
