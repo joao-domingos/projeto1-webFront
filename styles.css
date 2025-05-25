@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -7,6 +9,8 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #fbf1c7;
+  font-family: Arial, sans-serif;
+  color: #3c3836;
 }
 
 header, footer {
@@ -15,6 +19,8 @@ header, footer {
   background-color: #d65d0e;
   width: 100%;
   text-align: center;
+  color: #ebdbb2;
+  padding: 15px;
 }
 
 .menu {
@@ -28,12 +34,41 @@ header, footer {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  padding: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ebdbb2;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.menu ul li a:hover {
+  background-color: #fe8019;
+}
+
+section {
+  width: 40%;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .sobre {
   width: 100%;
   height: 40%;
   font-size: 20px;
+  background-color: #ebdbb2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.sobre p {
+  font-size: 1.1em;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 figure {
@@ -44,12 +79,54 @@ figure {
 .contato {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #ebdbb2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+#localizacao-contato {
+  flex-basis: 65%;
+  text-align: center;
+}
+
+#localizacao-contato iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #info-contato {
+  flex-basis: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  padding-left: 20px;
+  align-items: flex-start;
+}
+
+#info-contato p, #info-contato a {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #3c3836;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#info-contato a:hover {
+  color: #fe8019;
+}
+
+#info-contato i {
+  font-size: 1.4em;
+  color: #d65d0e;
 }
 
 /*carrossel funcionando*/
