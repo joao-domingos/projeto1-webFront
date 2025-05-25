@@ -18,12 +18,10 @@ Este projeto é uma aplicação web front-end simples, desenvolvida com foco em 
 ## 🖼️ Demonstração Visual (Screenshots)
 
 **Tela de Login:**
-![Exemplo de Tela de Login](https://via.placeholder.com/400x250.png?text=Tela+de+Login)
-*Substitua pela imagem real da sua tela de login.*
+<figure><img src="/readme-prints/login.png" style="width: 150px; height: 150px; border-radius: 10px;"></figure>
 
 **Página Principal com Carrossel:**
-![Exemplo da Página Principal](https://via.placeholder.com/400x250.png?text=Página+Principal+com+Carrossel)
-*Substitua pela imagem real da sua página principal.*
+<figure><img src="/readme-prints/carrossel.png" style="width: 150px; height: 150px; border-radius: 10px;"></figure>
 
 ## 🚀 Como Acessar/Executar
 
