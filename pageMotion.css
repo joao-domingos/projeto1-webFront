@@ -47,3 +47,7 @@ input[type="submit"] {
     margin-top: 10px;
     cursor: pointer;
 }
+
+#button-admin {
+    margin-right: 100%;
+}

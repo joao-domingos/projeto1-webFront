@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <section id="cadastro-admin">
+        <h1>Cadastro Admin</h1>
+        <form id="form-admin">
+            <label for="nome-admin">Nome:</label>
+            <input type="text" id="nome-admin" name="nome-admin" required><br>
+            <label for="email-admin">Email:</label>
+            <input type="email" id="email-admin" name="email-admin" required><br>
+            <input id="cadastrar-admin" type="submit" value="cadastrar admin">
+        </form>
+        <button id="limpar-dados">limpar dados</button>
+    </section>
+    <section>
+        <form>
+            <label for="procura">Procurar:</label>
+            <input type="search" id="site-search" name="site-search"><br>
+        </form>
+        <button id="delete-all">Deletar todos os usuarios</button>
+        <div id="lista-admin">
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
