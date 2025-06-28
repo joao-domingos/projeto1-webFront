@@ -13,7 +13,7 @@ body {
     font-family: sans-serif;
 }
 
-#cadastro {
+#cadastro-admin {
     display: flex;
     justify-content: center;
     align-items: center;

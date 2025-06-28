@@ -8,7 +8,13 @@ const inputBusca = document.querySelector("#site-search");
 const formLimpaDados = document.querySelector("#limpar-dados");
 const listaLimpaUsers = document.querySelector("#delete-all");
 
-// --- EVENT LISTENERS ---
+const buttonAdmin = document.querySelector("#button-admin");
+
+//event listeners
+
+buttonAdmin.addEventListener('click', function() {
+    window.location.href = 'admin.html'; 
+});
 
 formLimpaDados.addEventListener("click", function(event) {
     event.preventDefault();
