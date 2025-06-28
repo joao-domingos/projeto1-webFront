@@ -8,13 +8,7 @@ const inputBusca = document.querySelector("#site-search");
 const formLimpaDados = document.querySelector("#limpar-dados");
 const listaLimpaUsers = document.querySelector("#delete-all");
 
-const buttonAdmin = document.querySelector("#button-admin");
-
 //event listeners
-
-buttonAdmin.addEventListener('click', function() {
-    window.location.href = 'admin.html'; 
-});
 
 formLimpaDados.addEventListener("click", function(event) {
     event.preventDefault();
@@ -40,7 +34,8 @@ inputBusca.addEventListener("keyup", function() {
     const listaFiltrada = listaCompleta.filter(function(user) {
         return (
             user.nome.toLowerCase().includes(termoBusca) ||
-            user.email.toLowerCase().includes(termoBusca)
+            user.email.toLowerCase().includes(termoBusca) ||
+            user.data.includes(termoBusca)
         );
     });
 
@@ -48,7 +43,7 @@ inputBusca.addEventListener("keyup", function() {
 });
 
 
-// --- FUNÇÕES ---
+// funcoes
 
 function cadastrarUserAdmin() {
     const lista = JSON.parse(localStorage.getItem("users")) || [];
@@ -81,8 +76,7 @@ function exibirUsersAdmin(listaParaExibir) {
 
         const buttonDelete = document.createElement("button");
         buttonDelete.textContent = "Excluir";
-        
-        // Encontra o índice original do usuário na lista completa para garantir a exclusão correta
+
         const originalIndex = listaCompleta.findIndex(u => u.email === user.email && u.nome === user.nome);
         
         buttonDelete.setAttribute("data-index", originalIndex);
@@ -107,8 +101,8 @@ function excluirUsuario(event) {
 
 function excluirTodosUsuarios() {
     if (confirm("Deseja realmente deletar todos os usuários admin?")) {
-        localStorage.removeItem("users"); // Mais simples que ler, esvaziar e salvar de novo
-        exibirUsersAdmin([]); // Exibe uma lista vazia
+        localStorage.removeItem("users");
+        exibirUsersAdmin([]);
     }
 }
 
@@ -117,7 +111,6 @@ function limparDados() {
     inputEmailAdmin.value = "";
 }
 
-// --- CARREGAMENTO INICIAL ---
-// Carrega a lista de usuários sempre que a página for carregada
+// carrega a lista de usuários sempre que a página for carregada
 const listaInicial = JSON.parse(localStorage.getItem("users")) || [];
 exibirUsersAdmin(listaInicial);
